@@ -1,0 +1,29 @@
+public class program3 {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("ENTER THE String: ");
+        String input=sc.nextLine();
+        boolean result=isvalid(input);
+        if(result){
+            System.out.println("username is valid");
+        }else {
+            System.out.println("invalid input");
+        }
+    }
+    public static boolean isvalid(String username){
+        if(username.length()<5){
+            return false;
+        }
+        if(Character.isDigit(username.charAt(0))){
+            return false;
+        }
+        if(username.contains(" ")){
+            return false;
+        }
+        return true;
+    }
+}
+
+output:
+ENTER THE String: akash@3354
+username is valid

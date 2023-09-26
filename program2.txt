@@ -1,0 +1,10 @@
+public class program2 {
+    public static void main(String[] args) {
+        String s="2000";
+        int i=Integer.parseInt(s);
+        System.out.println(i);
+    }
+}
+
+output:
+2000

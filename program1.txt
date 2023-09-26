@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class program1 {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("ENTER THE String: ");
+        String input=sc.nextLine();
+        String result=swap(input);
+        System.out.println(result);
+
+    }
+    public static String swap(String str){
+        char[] Characters=str.toCharArray();
+        int left=0;
+        int right=str.length()-1;
+        while(left<right) {
+            char temp = Characters[left];
+            Characters[left] = Characters[right];
+            Characters[right] = temp;
+            left++;
+            right--;
+        }
+        return new String(Characters);
+    }
+}
+
+
+
+output: 
+ENTER THE String: akash
+hsaka
