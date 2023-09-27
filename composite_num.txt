@@ -1,0 +1,25 @@
+    public static boolean iscomposite(int num){
+        if(num<2){//This checks if num is less than 2. If num is less than 2, it returns false.
+            // This is because 1 and negative numbers are not considered composite by definition.
+            return false;
+        }for(int i=2;i<=Math.sqrt(num);i++){ //why math.sqrt came
+            if(num%2==0){
+                return true;
+            }
+        }return false;
+    }
+    public static int countcomposite(int[] arr){
+        int count=0;
+        for (int num:arr) {
+            if(iscomposite(num)){
+                count++;
+            }
+        }return count;
+    }
+
+    public static void main(String[] args) {
+        int[] arr={16, 18, 27, 16, 23, 21, 19};
+        int result=countcomposite(arr);
+        System.out.println("the composite numbers are: "+result);
+    }
+}
